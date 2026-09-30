@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Shortly URL shortener</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <a class="site-nav__brand" href="#" aria-label="Shortly home">
+      <img src="./images/logo.svg" alt="Shortly">
+    </a>
+    <div class="site-nav__menu" id="siteNavMenu">
+      <div class="site-nav__links">
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">Resources</a>
+      </div>
+      <div class="site-nav__actions">
+        <a href="#">Login</a>
+        <a class="site-nav__signup" href="#">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">More than just shorter links</h1>
+      <p class="hero__description">
+        Build your brand&rsquo;s recognition and get detailed insights
+        on how your links are performing.
+      </p>
+      <a class="hero__cta" href="#">Get Started</a>
+    </div>
+    <img src="./images/illustration-working.svg" alt="" class="hero__image">
+  </section>
+
+  <section class="shorten-url" id="shortenUrl">
+    <form class="" id="">
+      <input class="url-input" id="inputUrl" type="url" placeholder="Shorten a link here..." required>
+      <button class="submit-btn" id="submitBtn" type="submit">Shorten It!</button>
+    </form>
+  </section>
+
+  <section class="shortened-url hide" id="shortenedUrl">
+    <div class="shorted-container" id="shortedContainer">
+      <p id="originalUrl"></p>
+      <p class="" id="shortedUrl"></p>
+      <button class="copy-btn" id="copyBtn" type="submit">Copy</button>
+    </div>
+  </section>
+
+  <section class="stats" id="stats">
+    <div class="stats-topic">
+      <h2 class="" id="">Advanced Statistics</h2>
+      <p class="" id="">
+        Track how your links are performing across the web with our
+        advanced statistics dashboard.
+      </p>
+    </div>
+
+    <div class="stats-card">
+      <h3 class="" id="">Brand Recognition</h3>
+      <p class="" id="">
+        Boost your brand recognition with each click. Generic links don&rsquo;t
+        mean a thing. Branded links help instil confidence in your content.
+      </p>
+    </div>
+
+    <div class="stats-card">
+      <h3 class="" id="">Detailed Records</h3>
+      <p class="" id="">
+        Gain insights into who is clicking your links. Knowing when and where
+        people engage with your content helps inform better decisions.
+      </p>
+    </div>
+
+    <div class="stats-card">
+      <h3 class="" id="">Fully Customizable</h3>
+      <p class="" id="">
+        Improve brand awareness and content discoverability through customizable
+        links, supercharging audience engagement.
+      </p>
+    </div>
+  </section>
+
+  <section class="cta" id="cta">
+    <h2 class="" id="">Boost your links today</h2>
+    <a class="" id="" href="#">Get Started</a>
+  </section>
+
+  <footer class="" id="">
+    <nav class="" id="">
+      <h4 class="" id="">Features</h4>
+      <a class="" id="" href="#">Link Shortening</a>
+      <a class="" id="" href="#">Branded Links</a>
+      <a class="" id="" href="#">Analytics</a>
+    </nav>
+
+    <nav class="" id="">
+      <h4 class="" id="">Resources</h4>
+      <a class="" id="" href="#">Blog</a>
+      <a class="" id="" href="#">Developers</a>
+      <a class="" id="" href="#">Support</a>
+    </nav>
+
+    <nav class="" id="">
+      <h4 class="" id="">Company</h4>
+      <a class="" id="" href="#">About</a>
+      <a class="" id="" href="#">Our Team</a>
+      <a class="" id="" href="#">Careers</a>
+      <a class="" id="" href="#">Contact</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
