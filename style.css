@@ -19,8 +19,8 @@ body {
     align-items: center;
     gap: 3rem;
     max-width: 1120px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 10.5rem;
+    background-color: hsl(0, 0%, 88.2%);
 }
 
 .site-nav__brand {
@@ -52,7 +52,7 @@ body {
 }
 
 .site-nav a {
-    color: var(--color-gray);
+    color: #848383;
     text-decoration: none;
     font-size: 0.875rem;
     font-weight: 700;
@@ -154,13 +154,14 @@ section {
     gap: 1rem;
     width: min(100%, 1120px);
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: auto;
     padding: 2rem;
     border-radius: 6px;
     background-color: var(--color-purple);
     background-image: url("./images/bg-shorten-desktop.svg");
     background-position: center;
     background-size: cover;
+    margin-top: 3rem;
 }
 
 .url-input,
@@ -231,7 +232,7 @@ section {
     margin: 0 auto 0.75rem;
     padding: 1rem;
     border-radius: 6px;
-    background: #f9f6f6;
+    background: hsl(230, 25%, 95%);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 

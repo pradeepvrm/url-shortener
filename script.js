@@ -8,7 +8,7 @@ const originalUrl = document.getElementById("originalUrl");
 
 async function createLink() {
   const endpoint = "https://app.linklyhq.com/api/v1/link";
-  const url = inputUrl.value.trim();
+  const url = inputUrl.value;
 
   const params = {
     api_key: "yy4Y6sjL/eXf4gAVsVwnFQ==",
