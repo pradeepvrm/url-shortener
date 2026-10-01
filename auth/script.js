@@ -24,7 +24,7 @@ function validateForm(form, fields) {
     for (const name of fields) {
             const input = form.elements[name];
             const errorEl = form.querySelector(`#${name}Error`);
-        const value = input ? input.value.trim() : '';
+            const value = input ? input.value.trim() : '';
             const message = VALIDATORS[name] ? VALIDATORS[name](value) : '';
 
         if (errorEl) errorEl.textContent = message;
@@ -42,16 +42,27 @@ function setSubmitState(submitBtn, isValid) {
 function handleSubmit(form, fields) {
     if (!form) return;
 
+    const submitBtn = form.querySelector('#submitBtn');
+
     form.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        const submitBtn = form.querySelector('#submitBtn');
         const isValid = validateForm(form, fields);
 
         setSubmitState(submitBtn, isValid);
-        if (isValid) form.reset();
+        if (isValid) {
+            form.reset();
+            window.location.href = form.dataset.redirect || '../index.html';
+        }
     });
-}
+
+    if (submitBtn) {
+        submitBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            form.requestSubmit();
+        });
+    }
+} 
 
 handleSubmit(document.getElementById('signupForm'), ['username', 'email', 'password']);
 handleSubmit(document.getElementById('loginForm'), ['email', 'password']);

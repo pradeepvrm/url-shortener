@@ -1,8 +1,12 @@
 :root {
     --color-cyan: hsl(180, 66%, 49%);
-    --color-gray: hsl(257, 7%, 63%);
+    --color-cyan-hover: hsl(180, 66%, 70%);
+    --color-gray: hsl(257, 9%, 48%);
     --color-purple: hsl(257, 27%, 26%);
-    --color-dark: hsl(255, 11%, 22%);
+    --color-purple-soft: hsl(257, 32%, 42%);
+    --color-purple-tint: hsl(257, 38%, 95%);
+    --color-purple-focus: hsl(257, 55%, 58%);
+    --color-ink: hsl(260, 8%, 14%);
 }
 
 body {
@@ -20,8 +24,9 @@ body {
     gap: 3rem;
     max-width: 1120px;
     padding: 1.5rem 10.5rem;
-    background-color: hsl(0, 0%, 88.2%);
-}
+    background-color: var(--color-purple-tint);
+        box-shadow: 0 1px 0 hsl(257, 30%, 88%);
+    }
 
 .site-nav__brand {
     display: flex;
@@ -52,7 +57,7 @@ body {
 }
 
 .site-nav a {
-    color: #848383;
+    color: var(--color-purple-soft);
     text-decoration: none;
     font-size: 0.875rem;
     font-weight: 700;
@@ -61,7 +66,7 @@ body {
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-    color: var(--color-dark);
+    color: var(--color-purple);
 }
 
 .site-nav .site-nav__signup {
@@ -73,7 +78,7 @@ body {
 
 .site-nav .site-nav__signup:hover,
 .site-nav .site-nav__signup:focus-visible {
-    background: hsl(180, 66%, 70%);
+    background: var(--color-cyan-hover);
     color: #fff;
 }
 
@@ -101,7 +106,7 @@ section {
 .hero__title {
     max-width: 580px;
     margin: 0 0 0.75rem;
-    color: var(--color-dark);
+    color: var(--color-purple);
     font-size: clamp(2.75rem, 5vw, 4.5rem);
     font-weight: 700;
     line-height: 1.1;
@@ -111,7 +116,7 @@ section {
 .hero__description {
     max-width: 500px;
     margin: 0 0 2rem;
-    color: var(--color-gray);
+    color: var(--color-purple-soft);
     font-size: 1.2rem;
     line-height: 1.65;
 }
@@ -130,7 +135,7 @@ section {
 
 .hero__cta:hover,
 .hero__cta:focus-visible {
-    background: hsl(180, 66%, 70%);
+    background: var(--color-cyan-hover);
 }
 
 .hero__image {
@@ -158,7 +163,8 @@ section {
     padding: 2rem;
     border-radius: 6px;
     background-color: var(--color-purple);
-    background-image: url("./images/bg-shorten-desktop.svg");
+    background-image: url("./images/bg-shorten-desktop.svg"),
+        linear-gradient(120deg, rgba(98, 76, 148, 0.55), rgba(59, 46, 92, 0.55));
     background-position: center;
     background-size: cover;
     margin-top: 3rem;
@@ -178,7 +184,7 @@ section {
     min-width: 0;
     padding: 0 1rem;
     background: #fff;
-    color: var(--color-dark);
+        color: var(--color-purple);
     font-size: 1rem;
 }
 
@@ -188,7 +194,7 @@ section {
 }
 
 .url-input:focus-visible {
-    outline: 3px solid var(--color-cyan);
+    outline: 3px solid var(--color-purple-focus);
     outline-offset: 2px;
 }
 
@@ -210,7 +216,7 @@ section {
 
 .submit-btn:hover,
 .submit-btn:focus-visible {
-    background: hsl(180, 66%, 70%);
+    background: var(--color-cyan-hover);
 }
 
 .submit-btn:focus-visible {
@@ -232,8 +238,8 @@ section {
     margin: 0 auto 0.75rem;
     padding: 1rem;
     border-radius: 6px;
-    background: hsl(230, 25%, 95%);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background: var(--color-purple-tint);
+        box-shadow: 0 0.5rem 1.5rem hsl(257 27% 26% / 10%);
 }
 
 .shorted-container p {
@@ -245,7 +251,7 @@ section {
 }
 
 #originalUrl {
-    color: var(--color-dark);
+    color: var(--color-purple);
 }
 
 #shortedUrl {
@@ -268,7 +274,7 @@ section {
 
 .copy-btn:hover,
 .copy-btn:focus-visible {
-    background: hsl(180, 66%, 70%);
+    background: var(--color-cyan-hover);
 }
 
 .copy-btn:focus-visible {
@@ -289,7 +295,7 @@ section {
     gap: 0 2rem;
     box-sizing: border-box;
     padding: 5rem max(1.5rem, calc((100vw - 1120px) / 2)) 7rem;
-    background: hsl(230, 25%, 95%);
+        background: var(--color-purple-tint);
 }
 
 .stats-topic {
@@ -301,7 +307,7 @@ section {
 
 .stats-topic h2 {
     margin: 0 0 0.75rem;
-    color: var(--color-dark);
+    color: var(--color-purple);
     font-size: clamp(1.75rem, 3vw, 2.25rem);
     line-height: 1.2;
 }
@@ -320,7 +326,13 @@ section {
     padding: 4rem 1.5rem 1.75rem;
     border-radius: 5px;
     background: #fff;
-    box-shadow: 0 0.5rem 1.5rem hsl(255 11% 22% / 5%);
+    box-shadow: 0 0.5rem 1.5rem hsl(257 27% 26% / 8%);
+    transition: box-shadow 160ms ease, transform 160ms ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.75rem 1.75rem hsl(257 27% 26% / 16%);
 }
 
 .stats-card:nth-of-type(3) {
@@ -360,7 +372,7 @@ section {
 
 .stats-card h3 {
     margin: 0 0 0.75rem;
-    color: var(--color-dark);
+    color: var(--color-purple);
     font-size: 1.125rem;
     line-height: 1.3;
 }
@@ -375,7 +387,8 @@ section {
 .cta {
     padding: 2.75rem 1.5rem;
     background-color: var(--color-purple);
-    background-image: url("./images/bg-boost-desktop.svg");
+    background-image: url("./images/bg-boost-desktop.svg"),
+        linear-gradient(120deg, rgba(59, 46, 92, 0.55), rgba(98, 76, 148, 0.55));
     background-position: center;
     background-size: cover;
     color: #fff;
@@ -404,7 +417,7 @@ section {
 
 .cta a:hover,
 .cta a:focus-visible {
-    background: hsl(180, 66%, 70%);
+    background: var(--color-cyan-hover);
 }
 
 .cta a:focus-visible {
@@ -418,7 +431,7 @@ footer {
     gap: 18rem;
     box-sizing: border-box;
     padding: 3.5rem max(1.5rem, calc((100vw - 1120px) / 2));
-    background: hsl(260, 8%, 14%);
+    background: var(--color-ink);
     color: #fff;
 }
 
@@ -437,7 +450,7 @@ footer h4 {
 }
 
 footer a {
-    color: hsl(0, 0%, 75%);
+    color: hsl(257, 20%, 75%);
     font-size: 0.85rem;
     line-height: 1.4;
     text-decoration: none;
@@ -488,7 +501,8 @@ footer a:focus-visible {
 
     .cta {
         padding: 5.5rem 1.5rem;
-        background-image: url("./images/bg-boost-mobile.svg");
+        background-image: url("./images/bg-boost-mobile.svg"),
+            linear-gradient(120deg, rgba(59, 46, 92, 0.55), rgba(98, 76, 148, 0.55));
         background-position: center;
         background-size: cover;
     }

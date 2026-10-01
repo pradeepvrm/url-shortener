@@ -1,7 +1,7 @@
 :root {
     --color-cyan: hsl(180, 66%, 49%);
     --color-cyan-hover: hsl(180, 66%, 70%);
-    --color-gray: hsl(257, 9%, 48%);
+    --color-gray: hsl(257, 7%, 63%);
     --color-purple: hsl(257, 27%, 26%);
     --color-dark: hsl(255, 11%, 22%);
     --color-surface: hsl(230, 25%, 95%);
@@ -76,8 +76,12 @@ input:invalid:not(:placeholder-shown) {
     outline-offset: -2px;
 }
 
-button {
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 3.25rem;
+    box-sizing: border-box;
     padding: 0 1.75rem;
     border: 0;
     border-radius: 6px;
@@ -86,25 +90,27 @@ button {
     font: inherit;
     font-size: 1rem;
     font-weight: 700;
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
     transition: background-color 160ms ease;
 }
 
-button:hover,
-button:focus-visible {
+.submit-btn:hover,
+.submit-btn:focus-visible {
     background: var(--color-cyan-hover);
 }
 
-button:focus-visible {
+.submit-btn:focus-visible {
     outline: 3px solid #fff;
     outline-offset: 2px;
 }
 
-button.is-valid {
+.submit-btn.is-valid {
     background: var(--color-success);
 }
 
-button.is-invalid {
+.submit-btn.is-invalid {
     background: var(--color-error);
 }
 

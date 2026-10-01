@@ -14,6 +14,7 @@ async function createLink() {
     api_key: "yy4Y6sjL/eXf4gAVsVwnFQ==",
     workspace_id: "407802",
     url: url,
+    domain: "flaer.tech"
   }
   try {
     const response = await fetch(endpoint, {
