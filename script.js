@@ -11,7 +11,7 @@ async function createLink() {
   const url = inputUrl.value;
 
   const params = {
-    api_key: "yy4Y6sjL/eXf4gAVsVwnFQ==",
+    api_key: "hZ7Xe0x1uADUvxYK7mdGfg==",
     workspace_id: "407802",
     url: url,
     domain: "flaer.tech"
