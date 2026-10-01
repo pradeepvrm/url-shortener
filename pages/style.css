@@ -1,0 +1,146 @@
+﻿:root {
+    --color-purple: hsl(257, 27%, 26%);
+    --color-purple-soft: hsl(257, 32%, 42%);
+    --color-purple-tint: hsl(257, 38%, 95%);
+    --color-gray: hsl(257, 9%, 48%);
+    --color-cyan: hsl(180, 66%, 49%);
+}
+
+body {
+    margin: 0;
+    padding: 3rem 1.5rem;
+    font-family: "Poppins", sans-serif;
+    color: var(--color-purple);
+    background: var(--color-purple-tint);
+}
+
+.page {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 0.5rem;
+    font-size: 2rem;
+}
+
+.intro {
+    margin: 0 0 2.5rem;
+    color: var(--color-purple-soft);
+    line-height: 1.6;
+}
+
+.card-grid {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.card {
+    position: relative;
+    padding: 1.25rem 1.5rem;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 0.5rem 1.5rem hsl(257 27% 26% / 8%);
+}
+
+.card h2 {
+    margin: 0 0 0.35rem;
+    font-size: 1.1rem;
+}
+
+.card p {
+    margin: 0;
+    color: var(--color-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.card a {
+    color: var(--color-cyan);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.card a:hover,
+.card a:focus-visible {
+    text-decoration: underline;
+}
+
+.plan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    padding-left: 0;
+}
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.plan-name {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.plan-price {
+    margin: 0;
+    color: var(--color-purple);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.plan-price span {
+    color: var(--color-gray);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.plan p {
+    flex: 1;
+}
+
+.plan-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: var(--color-gray);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.plan-list li {
+    padding: 0.4rem 0;
+    border-top: 1px solid var(--color-purple-tint);
+}
+
+.plan-cta {
+    display: block;
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    background: var(--color-purple);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 160ms ease;
+}
+
+.plan-cta:hover,
+.plan-cta:focus-visible {
+    background: var(--color-purple-soft);
+}
+
+
+@media (max-width: 700px) {
+    .plan-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
