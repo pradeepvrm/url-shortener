@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <nav class="site-nav" aria-label="Main navigation">
+        <a class="site-nav__brand" href="../index.html" aria-label="Shortly home">
+            <img src="../images/logo.svg" alt="Shortly">
+        </a>
+        <div class="site-nav__menu" id="siteNavMenu">
+            <div class="site-nav__links">
+                <a href="features.html">Features</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="resources.html" aria-current="page">Resources</a>
+            </div>
+            <div class="site-nav__actions">
+                <a href="../auth/login.html">Login</a>
+                <a class="site-nav__signup" href="../auth/signup.html">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
     <main class="page">
         <h1>Resources</h1>
         <p class="intro">
@@ -16,25 +36,25 @@
         <ul class="card-grid">
             <li class="card">
                 <h2>Getting started guide</h2>
-                <p>Create your account, shorten your first link, and set up a branded domain.</p>
+                <p>Create your account, shorten your first link, and set up a branded domain. A short walkthrough with screenshots and examples takes you from an empty dashboard to a working link.</p>
                 <a href="#">Read the guide</a>
             </li>
 
             <li class="card">
                 <h2>API documentation</h2>
-                <p>All endpoints, request parameters, and response formats for the Shortly API.</p>
+                <p>All endpoints, request parameters, and response formats for the Shortly API. Every method lists required and optional fields, with sample requests in several languages.</p>
                 <a href="#">View the docs</a>
             </li>
 
             <li class="card">
                 <h2>Analytics walkthrough</h2>
-                <p>Understand clicks, referrers, and the reports available on your dashboard.</p>
+                <p>Understand clicks, referrers, and the reports available on your dashboard. Learn what each chart measures and how to build a report around your question.</p>
                 <a href="#">See the walkthrough</a>
             </li>
 
             <li class="card">
                 <h2>Help center</h2>
-                <p>Troubleshooting steps and answers to the questions we hear most often.</p>
+                <p>Troubleshooting steps and answers to the questions we hear most often. From forgotten passwords to unexpected redirects, find a clear fix without waiting for support.</p>
                 <a href="#">Visit the help center</a>
             </li>
         </ul>

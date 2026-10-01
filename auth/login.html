@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>login</title>
+
+      <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
       <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+      <nav class="site-nav" aria-label="Main navigation">
+          <a class="site-nav__brand" href="../index.html" aria-label="Shortly home">
+              <img src="../images/logo.svg" alt="Shortly">
+          </a>
+          <div class="site-nav__menu" id="siteNavMenu">
+              <div class="site-nav__links">
+                  <a href="../pages/features.html">Features</a>
+                  <a href="../pages/pricing.html">Pricing</a>
+                  <a href="../pages/resources.html">Resources</a>
+              </div>
+              <div class="site-nav__actions">
+                  <a href="login.html" aria-current="page">Login</a>
+                  <a class="site-nav__signup" href="signup.html">Sign Up</a>
+              </div>
+          </div>
+      </nav>
+
       <form id="loginForm" novalidate>
           <div class="form-group">
               <label for="email">Email:</label>
@@ -21,7 +41,11 @@
           </div>
 
           <a href="#" class="submit-btn" id="submitBtn" role="button">Login</a>
-      </form>
+
+            <p class="form-footer">
+                Already have an account? <a href="signup.html">Sign up</a>
+            </p>
+        </form>
     
       <script src="script.js"></script>
 </body>

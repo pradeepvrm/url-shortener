@@ -468,6 +468,11 @@ footer a:focus-visible {
 }
 
 @media (max-width: 600px) {
+
+    .site-nav {
+        padding: 1.5rem;
+    }
+
     .stats {
         grid-template-columns: minmax(0, 1fr);
         gap: 0;
@@ -497,6 +502,10 @@ footer a:focus-visible {
 
     .stats-card h3 {
         font-size: 1.15rem;
+    }
+
+    .submit-btn {
+        padding: 0;
     }
 
     .cta {

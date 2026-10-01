@@ -4,6 +4,7 @@ const form = document.querySelector("form");
 const copyBtn = document.getElementById("copyBtn");
 const shortUrl = document.getElementById("shortedUrl");
 const originalUrl = document.getElementById("originalUrl");
+const shortenedUrl = document.getElementById("shortenedUrl");
 
 
 async function createLink() {
@@ -11,10 +12,9 @@ async function createLink() {
   const url = inputUrl.value;
 
   const params = {
-    api_key: "hZ7Xe0x1uADUvxYK7mdGfg==",
-    workspace_id: "407802",
+    api_key: "lkbxrfLxhnIvBn+icCZzbg==",
+    workspace_id: "408121",
     url: url,
-    domain: "flaer.tech"
   }
   try {
     const response = await fetch(endpoint, {
@@ -51,7 +51,7 @@ copyBtn.addEventListener("click", () => {
     copyBtn.innerText = "Copy";
     copyBtn.classList.remove("copied");
     copyBtn.disabled = false;
-  }, 5000);
+  }, 4000);
 });
 
 function displayShortUrl(url) {

@@ -3,6 +3,8 @@
     --color-cyan-hover: hsl(180, 66%, 70%);
     --color-gray: hsl(257, 7%, 63%);
     --color-purple: hsl(257, 27%, 26%);
+    --color-purple-soft: hsl(257, 32%, 42%);
+    --color-purple-tint: hsl(257, 38%, 95%);
     --color-dark: hsl(255, 11%, 22%);
     --color-surface: hsl(230, 25%, 95%);
     --color-error: hsl(352, 70%, 50%);
@@ -11,6 +13,7 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -22,6 +25,76 @@ body {
     background-size: cover;
 }
 
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    max-width: 1128px;
+    padding: 1.5rem 10.5rem;
+    background-color: var(--color-purple-tint);
+    box-shadow: 0 1px 0 hsl(257, 30%, 88%);
+}
+
+.site-nav__brand {
+    display: flex;
+    flex: 0 0 auto;
+}
+
+.site-nav__brand img {
+    display: block;
+    width: 121px;
+    height: 33px;
+}
+
+.site-nav__menu,
+.site-nav__links,
+.site-nav__actions {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav__menu {
+    flex: 1;
+    justify-content: space-between;
+}
+
+.site-nav__links,
+.site-nav__actions {
+    gap: 2rem;
+}
+
+.site-nav a {
+    color: var(--color-purple-soft);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    transition: color 160ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+    color: var(--color-purple);
+}
+
+.site-nav a:focus-visible {
+    outline: 2px solid var(--color-purple-focus, hsl(257, 55%, 58%));
+    outline-offset: 3px;
+}
+
+.site-nav .site-nav__signup {
+    padding: 0.7rem 1.6rem;
+    border-radius: 999px;
+    background: var(--color-cyan);
+    color: #fff;
+}
+
+.site-nav .site-nav__signup:hover,
+.site-nav .site-nav__signup:focus-visible {
+    background: var(--color-cyan-hover);
+    color: #fff;
+}
+
 #signupForm,
 #loginForm {
     display: grid;
@@ -30,6 +103,7 @@ body {
     max-width: 360px;
     box-sizing: border-box;
     padding: 2rem;
+    margin: auto 0;
     border: 0;
     border-radius: 6px;
     background-color: #fff;
@@ -43,7 +117,7 @@ body {
 }
 
 label {
-    color: var(--color-gray);
+    color: var(--color-purple-soft);
     font-size: 0.875rem;
     font-weight: 700;
 }
@@ -121,6 +195,23 @@ input:invalid:not(:placeholder-shown) {
     font-weight: 600;
 }
 
+.form-footer {
+    margin: 0;
+    color: var(--color-purple);
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.form-footer a {
+    color: var(--color-cyan);
+    font-weight: 700;
+}
+
+.form-footer a:hover,
+.form-footer a:focus-visible {
+    text-decoration: underline;
+}
+
 .message {
     margin: 0;
     min-height: 1em;
@@ -136,4 +227,10 @@ input:invalid:not(:placeholder-shown) {
 .message.success {
     color: var(--color-success);
     font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .site-nav {
+        padding: 1.5rem;
+    }
 }
